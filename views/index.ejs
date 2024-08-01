@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>INDEX</title>
+  </head>
+  <body>
+    <ul>
+      <% messages.map((message) => { %>
+      <li><%= message.user %>s</li>
+      <li><%= message.text %>s</li>
+      <li><%= message.added %>s</li>
+      <% }) %>
+    </ul>
+  </body>
+</html>
