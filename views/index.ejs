@@ -1,14 +1,22 @@
 <html>
   <head>
     <title>INDEX</title>
+    <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <ul>
-      <% messages.map((message) => { %>
-      <li><%= message.user %>s</li>
-      <li><%= message.text %>s</li>
-      <li><%= message.added %>s</li>
+    <div class="messages-container">
+      <% messages.forEach((message) => { %>
+      <div class="message-box">
+        <div class="message-header">
+          <strong>User:</strong> <%= message.user %>
+        </div>
+        <div class="message-content">
+          <strong>Message:</strong> <%= message.text %>
+        </div>
+        <a href="/message/<%= message.id %>"> show messages </a>
+      </div>
       <% }) %>
-    </ul>
+    </div>
+    <a href="/new">Add New Message</a>
   </body>
 </html>
